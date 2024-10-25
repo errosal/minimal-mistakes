@@ -6,7 +6,7 @@
   {% if author.avatar %}
     <div class="author__avatar" style="text-align: center;">
       <a href="{{ author.home | default: '/' | absolute_url }}">
-        <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image" class="u-photo" style="width: 200px; height: 200px; object-fit: fill; border-radius: 0; border: none; box-shadow: none;">
+        <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" itemprop="image" class="u-photo" style="width: 200px; height: 200px; object-fit: fill; object-position: 0% 50%; border-radius: 0; border: none; box-shadow: none;">
       </a>
     </div>
   {% endif %}
