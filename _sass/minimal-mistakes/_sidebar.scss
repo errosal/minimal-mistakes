@@ -200,28 +200,29 @@
 
   .author__urls {
     display: flex;
-    flex-direction: column; /* Make the links stack vertically */
-    align-items: center; /* Center the links */
+    flex-direction: column; /* Keep the items in rows, but we will adjust inside the links */
+    align-items: center;
     list-style-type: none;
     padding: 0;
   }
   
   .author__urls li {
-    margin-bottom: 15px; /* Add spacing between the rows */
+    margin-bottom: 10px; /* Reduce the space between the rows */
   }
   
   .author__urls a {
     display: flex;
-    flex-direction: column; /* Stack the icon and label vertically */
+    flex-direction: row; /* Align icon and text side by side */
     align-items: center;
     text-decoration: none;
     font-size: 0.85em; /* Adjust the size of the label text */
     color: inherit;
+    gap: 8px; /* Space between the icon and the text */
   }
   
   .author__urls i {
-    font-size: 1.2em; /* Make the icons smaller */
-    margin-bottom: 5px; /* Add space between the icon and the label */
+    font-size: 1.2em; /* Adjust the size of the icons */
+    margin-bottom: 0; /* Remove the bottom margin so it aligns horizontally */
   }
 
   @include breakpoint($large) {
