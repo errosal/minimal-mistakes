@@ -199,41 +199,29 @@
   }
 
   .author__urls {
-    display: block;
-    position: relative;
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column; /* Make the links stack vertically */
+    align-items: center; /* Center the links */
     list-style-type: none;
-    border: 0;
-    background: transparent;
-    box-shadow: none;
-    text-align: center;
+    padding: 0;
+  }
   
-    li {
-      white-space: nowrap;
-      display: block; /* Display each link on a separate row */
-      margin: 10px 0; /* Add some space between rows */
-    }
+  .author__urls li {
+    margin-bottom: 15px; /* Add spacing between the rows */
+  }
   
-    a {
-      display: inline-block;
-      margin-bottom: 5px;
-      padding-block: 2px;
-      color: inherit;
-      font-size: 0.9em; /* Make the text and icons smaller */
-      text-decoration: none;
-      text-align: center;
-      
-      i {
-        display: block; /* Place the icon above the text */
-        font-size: 1.2em; /* Adjust the icon size */
-        margin-bottom: 3px; /* Add a small margin between icon and text */
-      }
+  .author__urls a {
+    display: flex;
+    flex-direction: column; /* Stack the icon and label vertically */
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.85em; /* Adjust the size of the label text */
+    color: inherit;
+  }
   
-      &:hover {
-        text-decoration: underline;
-      }
-    }
+  .author__urls i {
+    font-size: 1.2em; /* Make the icons smaller */
+    margin-bottom: 5px; /* Add space between the icon and the label */
   }
 
   @include breakpoint($large) {
