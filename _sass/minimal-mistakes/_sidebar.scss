@@ -199,8 +199,41 @@
   }
 
   .author__urls {
-    span.label {
-      padding-inline-start: 5px;
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    text-align: center; /* Center the content inside the author URLs */
+  
+    li {
+      white-space: nowrap;
+      display: inline-block; /* Display list items inline to center them */
+      margin: 10px 0;
+    }
+  
+    a {
+      display: inline-block;
+      margin-bottom: 5px;
+      padding-block: 2px;
+      padding-inline-end: 5px;
+      color: inherit;
+      font-size: $type-size-5;
+      text-decoration: none;
+      text-align: center; /* Center the label text */
+      
+      i {
+        display: block; /* Make the icon appear on its own line */
+        font-size: 1.5em; /* Adjust icon size if needed */
+        margin-bottom: 5px;
+      }
+  
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 
